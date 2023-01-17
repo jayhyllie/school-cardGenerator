@@ -28,11 +28,21 @@ body {
 
 #gameover.show {
     display: flex;
+    flex-direction: column;
     animation: fade .3s ease;
 }
 
 #gameover h1 {
     font-size: 3rem;
+}
+
+#gameover .retry {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: .5em;
+    color: white;
+    padding: 1em 2em;
+    cursor: pointer;
 }
 
 body > header {

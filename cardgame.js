@@ -115,6 +115,7 @@ function wrong() {
 
     if (triesLeftCounter < 1) {
         triesLeft.textContent = 'Spelet slut!';
+        gameOver();
     } else {
         triesLeft.textContent = triesLeftCounter;
     }
@@ -155,3 +156,14 @@ nextHigher.addEventListener('click', function() {
     }
     oldCard = newCard;
 });
+
+// Game-over
+
+function gameOver() {
+    document.querySelector('#gameover').classList.add('show');
+    let retryBtn = document.querySelector('.retry');
+
+    retryBtn.addEventListener('click', () => {
+        location.reload();
+    })
+}
